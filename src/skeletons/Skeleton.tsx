@@ -1,4 +1,3 @@
-import React from 'react'
 import SkeletonItems from './SkeletonItems'
 import "./styling.css"
 
