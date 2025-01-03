@@ -1,0 +1,337 @@
+#main
+{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 83%;
+  max-height: 83%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+
+
+  && .a
+  {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &&:active
+    {
+      background-color: transparent;
+    }
+
+  }
+
+  && p
+  {
+    position: absolute;
+    top: 15px;
+    width: 85%;
+    min-height: 135px;
+    max-height: 155px;
+    text-align: justify;
+    box-shadow: 0 0 10px black inset;
+    border-radius:  90%;
+    padding: 20px 25px;
+    font-family: "DengXian Light";
+    font-size: 0.85em;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    align-items: first baseline;
+
+    && > #description
+    {
+      font-size: 1.5em;
+      font-style: italic;
+      min-width: 100%;
+      height: 30px;
+      text-align: center;
+      text-shadow: 2px 1px 2px white;
+      margin: 0 0 -30px;
+
+    }
+  }
+
+  && input
+  {
+    width: 75%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    text-align: center;
+    margin: 20px 0;
+
+    &&:focus
+    {
+      outline: none;
+    }
+  }
+
+  && textarea
+  {
+    width: 75%;
+    max-width: 75%;
+    height: 200px;
+    max-height: 200px;
+    text-align: justify;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+    border: none;
+    border: 1px solid black;
+
+    border-radius: 5px;
+  }
+}
+
+#sub-tasks
+{
+	min-width: 99%;
+	max-width: 99%;
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 185px;
+	overflow-y: scroll;
+  position: relative;
+  overflow-x: hidden;
+
+
+	&& > h2
+	{
+	margin: auto;
+	max-width: 25%;
+	font-family: "DengXian Light";
+	font-weight: lighter;
+	color: black;
+	margin-top: 20px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-radius: 0px 50% 0 45%;
+	padding: 3px;
+	text-shadow: 2px 1px 5px white;
+  position: fixed;
+
+	}
+
+	&& > #sublist
+	{
+		min-height: 300px;
+		max-height: 97%;
+		overflow-y: scroll;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		border-top: 1px solid black;
+		margin-top: 65px;
+    overflow-x: hidden;
+
+    && > h2
+    {
+      color: black;
+      max-width: 85%;
+      font-family: "DengXian Light";
+      text-shadow: 2px 1px 5px white;
+    }
+	}
+}
+
+
+.list-item
+{
+  position: relative;
+  width: 90%;
+  min-height: 60px;
+  border: 1px solid black;
+  box-shadow: inset 0 0 5px black;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 10px;
+
+  && input[type='checkbox']
+  {
+    max-width: 20px;
+    max-height: 20px;
+    accent-color: rgb(0, 0, 0);
+    background-color: black;
+
+  }
+
+  && h3
+  {
+    font-family: "DengXian Light";
+    color: black;
+    font-weight: lighter;
+    text-align: center;&&:hover {
+        cursor: pointer;
+      }
+  }
+
+  && svg
+  {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    color: black;
+  }
+
+  && .pop-up
+  {
+    position: absolute;
+    bottom: -162px;
+    right: 25px;
+    min-width: 2px;
+    max-height: 2px;
+    background-color: black;
+    border-radius: 7px;
+    transition: all 1s linear ;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: cadetblue;
+
+    && > li
+    {
+      width: 95%;
+      height: 35px;
+      list-style: none;
+      text-align: left;
+      display: flex;
+      background: #000;
+
+      &&:hover
+      {
+        cursor: pointer;
+      }
+
+
+    }
+
+        && svg {
+          color: cadetblue;
+        }
+  }
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#pop-up-add
+{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background-color: rgb(12, 21, 37, 0.5);
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  transition: bottom 500ms;
+
+  && > svg
+  {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  && h4
+  {
+    padding-top: 10px;
+    font-size: 1.35em;
+    font-family: "DengXian Light";
+  }
+
+  && #form
+  {
+    width: 90%;
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0px;
+
+    && > input, && > input[type="date"]
+    {
+      width: 80%;
+      height: 40px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    && > textarea
+    {
+      max-width: 80%;
+      min-width: 80%;
+      max-height: 80px;
+      min-height: 80px;
+      border-radius: 8px;
+      text-align: center;
+    }
+  }
+
+  && button
+  {
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+}
+
+#postpone
+{
+  width: 30px;
+  height: 35px;
+  padding: 0;
+  font-size: 1.5em;
+  margin-right: 12px;border: none;
+  background-color: transparent;
+  text-align: right;
+
+  &&:active
+  {
+    transform: scale(0.9);
+    transition: all 250ms;
+    background-color: transparent;
+  }
+
+
+  &&:focus
+  {
+    outline: none;
+  }
+
+
+}
+
+.tab-item.edit
+{
+  flex-direction: row;
+  font-size: 18px;
+  width: 200px;
+  justify-content: center;
+}

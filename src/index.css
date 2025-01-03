@@ -1,0 +1,152 @@
+@media (max-width: 500px)
+{
+  #root,
+    body {
+      background: linear-gradient(cadetblue, darkslateblue);
+    }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 95%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 500px)
+{
+  svg:hover
+  {
+    cursor: pointer;
+  }
+  body
+  {
+    background-color: rgb(12, 21, 37);
+  }
+  #root
+  {
+    max-width: 425px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(cadetblue, darkslateblue);
+
+    border-radius: 10px;
+
+  }
+
+  #main
+  {
+    width: 425px;
+    position: relative;
+    margin-top: 90px;
+    min-height: 675px;
+    max-height: 675px;
+    overflow-y: scroll;
+
+    && p{
+      max-width: 450px;
+    }
+  }
+
+  header
+  {
+    width: 425px;
+    left: auto;
+    border-bottom: 1px solid black;
+
+    && > img
+    {
+      max-width: 70px;
+      height: 55px;
+    }
+
+    && h1
+    {
+      text-align: center;
+      max-width: calc(100% - 153px);
+      font-size: 21px;
+
+    }
+  }
+
+  #sublist
+  {
+    max-height: 40px;
+    overflow-y: scroll;
+
+  }
+  *::-webkit-scrollbar {
+      display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #pop-up-add
+  {
+    max-width: 424px;
+  }
+
+}
+
+#add
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(cadetblue, darkslateblue, cadetblue);
+  box-shadow: 0 0 15px darkslateblue inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 15px;
+  bottom: 115px;
+}
