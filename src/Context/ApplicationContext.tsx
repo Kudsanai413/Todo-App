@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { IoClose, IoSaveOutline } from "react-icons/io5";
 import { insertAt} from "./temp";
 
-const tasks : todo[] = [
+const todo_tasks : todo[] = [
   {
     "id": 1,
     "title": "Create Login Sub-System",
@@ -311,10 +311,9 @@ export function ApplicationContextProvider({ children } : ChildrenType) : React.
 
 
     useEffect( () => {
-        async function GetTasks() {
             if (!loading.current)
             {
-                const response = await localStorage.getItem("tasks");
+                const response = localStorage.getItem("tasks");
                 if ( response )
                 {
                     const data = JSON.parse(response);
@@ -323,7 +322,8 @@ export function ApplicationContextProvider({ children } : ChildrenType) : React.
 
                 else
                 {
-                    setTodoTasks(tasks);
+                    alert(JSON.stringify(todo_tasks))
+                    setTodoTasks(todo_tasks);
                     localStorage.setItem("tasks", JSON.stringify(tasks));
                 }
 
@@ -334,9 +334,6 @@ export function ApplicationContextProvider({ children } : ChildrenType) : React.
             loading.current = true;
             }
 
-        }
-
-        GetTasks();
     }, [todoTasks]);
 
 
