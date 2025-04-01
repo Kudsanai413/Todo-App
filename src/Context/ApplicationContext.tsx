@@ -313,20 +313,8 @@ export function ApplicationContextProvider({ children } : ChildrenType) : React.
     useEffect( () => {
             if (!loading.current)
             {
-                const response = localStorage.getItem("tasks");
-                if ( response )
-                {
-                    const data = JSON.parse(response);
-                    setTodoTasks(data);
-                }
-
-                else
-                {
-                    alert(JSON.stringify(todo_tasks))
-                    setTodoTasks(todo_tasks);
-                    localStorage.setItem("tasks", JSON.stringify(tasks));
-                }
-
+                setTodoTasks(todo_tasks);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
                 dispatch({ action_type: reducerActions.revert })
 
 
